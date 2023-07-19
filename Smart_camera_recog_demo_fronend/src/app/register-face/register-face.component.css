@@ -1,0 +1,19 @@
+.scroll-textbox {
+  width: 40%;
+  height: 200px;
+  overflow: auto;
+}
+
+.message {
+  width: 30%;
+  min-height: 30%;
+  max-height: 30%;
+  overflow: auto;
+  float: right;
+}
+
+.registerDetails {
+  height: 300px;
+  min-height: 300px;
+  overflow-y: auto;
+}

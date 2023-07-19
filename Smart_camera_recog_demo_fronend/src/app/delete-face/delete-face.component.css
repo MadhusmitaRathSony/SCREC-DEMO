@@ -1,0 +1,20 @@
+  .mdc-data-table__table {
+    min-width: 80%;
+  }
+
+  mat-cell,
+  mat-header-cell,
+  mat-footer-cell {
+    display: table-cell;
+  }
+
+  .mat-elevation-z8,
+  .mat-mdc-elevation-specific.mat-elevation-z8 {
+    box-shadow: none;
+  }
+
+  .content {
+    height: 300px;
+    min-height: 300px;
+    overflow-y: auto;
+  }

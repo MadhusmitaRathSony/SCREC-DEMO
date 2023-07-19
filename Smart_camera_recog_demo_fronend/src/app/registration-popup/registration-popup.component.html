@@ -1,0 +1,143 @@
+<div class="popupHeader">
+  New Registration
+</div>
+<div class="popupContent form-horizontal">
+  <div class="form-group">
+    <label for="Face ID" class="col-sm-2">Face ID</label>
+    <div class="col-sm-4">
+      <input type="text" placeholder="Face ID" [(ngModel)]="inputValue1"
+        (input)="handleInputChange($event, 'inputValue1')" class="form-control">
+    </div>
+    <label for="Status" class="col-sm-2">Status</label>
+    <div class="col-sm-4">
+      <input type="text" placeholder="Status" [(ngModel)]="inputValue2"
+        (input)="handleInputChange($event, 'inputValue2')" class="form-control">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="Name" class="col-sm-2">Name</label>
+    <div class="col-sm-4">
+      <input type="text" placeholder="name" [(ngModel)]="inputValue3" (input)="handleInputChange($event, 'inputValue3')"
+        class="form-control">
+    </div>
+  </div>
+
+  <section id="secWithFaceMask">
+    <div class="faq-drawer">
+      <input class="faq-drawer__trigger" id="faq-drawer-WithFaceMask" type="checkbox" />
+      <label class="faq-drawer__title" for="faq-drawer-WithFaceMask">With Face Mask</label>
+      <div class="faq-drawer__content-wrapper">
+        <div class="faq-drawer__content">
+          <div class="form-group">
+            <img src="../../assets/Faces/Face1.png" alt="Face Direction 1" class="col-sm-2 images">
+            <div class="col-sm-4">
+              <input type="file" accept="image/*" (change)="onFileSelected($event,1)" class="form-control">
+            </div>
+            <img src="../../assets/Faces/Face1.png" alt="Face Direction 2" class="col-sm-2 images">
+            <div class="col-sm-4">
+              <input type="file" accept="image/*" (change)="onFileSelected($event,2)" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <img src="../../assets/Faces/Face1.png" alt="Face Direction 3" class="col-sm-2 images">
+            <div class="col-sm-4">
+              <input type="file" accept="image/*" (change)="onFileSelected($event,3)" class="form-control">
+            </div>
+            <img src="../../assets/Faces/Face1.png" alt="Face Direction 4" class="col-sm-2 images">
+            <div class="col-sm-4">
+              <input type="file" accept="image/*" (change)="onFileSelected($event,4)" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <img src="../../assets/Faces/Face1.png" alt="Face Direction 5" class="col-sm-2 images">
+            <div class="col-sm-4">
+              <input type="file" accept="image/*" (change)="onFileSelected($event,5)" class="form-control">
+            </div>
+            <img src="../../assets/Faces/Face1.png" alt="Face Direction 6" class="col-sm-2 images">
+            <div class="col-sm-4">
+              <input type="file" accept="image/*" (change)="onFileSelected($event,6)" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <img src="../../assets/Faces/Face1.png" alt="Face Direction 7" class="col-sm-2 images">
+            <div class="col-sm-4">
+              <input type="file" accept="image/*" (change)="onFileSelected($event,7)" class="form-control">
+            </div>
+            <img src="../../assets/Faces/Face1.png" alt="Face Direction 8" class="col-sm-2 images">
+            <div class="col-sm-4">
+              <input type="file" accept="image/*" (change)="onFileSelected($event,8)" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <img src="../../assets/Faces/Face1.png" alt="Face Direction 9" class="col-sm-2 images">
+            <div class="col-sm-4">
+              <input type="file" accept="image/*" (change)="onFileSelected($event,9)" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="secWithoutFaceMask">
+    <div class="faq-drawer">
+      <input class="faq-drawer__trigger" id="faq-drawer-WithOutFaceMask" type="checkbox" />
+      <label class="faq-drawer__title" for="faq-drawer-WithOutFaceMask">With Out Face Mask</label>
+      <div class="faq-drawer__content-wrapper">
+        <div class="faq-drawer__content">
+          <div class="form-group">
+            <img src="../../assets/Faces/Face1.png" alt="Face Direction 1" class="col-sm-2 images">
+            <div class="col-sm-4">
+              <input type="file" accept="image/*" (change)="onFileSelected($event,1)" class="form-control">
+            </div>
+            <img src="../../assets/Faces/Face1.png" alt="Face Direction 2" class="col-sm-2 images">
+            <div class="col-sm-4">
+              <input type="file" accept="im-age/*" (change)="onFileSelected($event,2)" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <img src="../../assets/Faces/Face1.png" alt="Face Direction 3" class="col-sm-2 images">
+            <div class="col-sm-4">
+              <input type="file" accept="image/*" (change)="onFileSelected($event,3)" class="form-control">
+            </div>
+            <img src="../../assets/Faces/Face1.png" alt="Face Direction 4" class="col-sm-2 images">
+            <div class="col-sm-4">
+              <input type="file" accept="image/*" (change)="onFileSelected($event,4)" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <img src="../../assets/Faces/Face1.png" alt="Face Direction 5" class="col-sm-2 images">
+            <div class="col-sm-4">
+              <input type="file" accept="image/*" (change)="onFileSelected($event,5)" class="form-control">
+            </div>
+            <img src="../../assets/Faces/Face1.png" alt="Face Direction 6" class="col-sm-2 images">
+            <div class="col-sm-4">
+              <input type="file" accept="image/*" (change)="onFileSelected($event,6)" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <img src="../../assets/Faces/Face1.png" alt="Face Direction 7" class="col-sm-2 images">
+            <div class="col-sm-4">
+              <input type="file" accept="image/*" (change)="onFileSelected($event,7)" class="form-control">
+            </div>
+            <img src="../../assets/Faces/Face1.png" alt="Face Direction 8" class="col-sm-2 images">
+            <div class="col-sm-4">
+              <input type="file" accept="image/*" (change)="onFileSelected($event,8)" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <img src="../../assets/Faces/Face1.png" alt="Face Direction 9" class="col-sm-2 images">
+            <div class="col-sm-4">
+              <input type="file" accept="image/*" (change)="onFileSelected($event,9)" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="form-group text-center">
+    <button class="btn-primary" (click)="register()" mat-button color="primary">Register</button>
+    <button class="btn-primary" (click)="cancelRegister()" mat-button color="primary">Cancel</button>
+  </div>
+</div>

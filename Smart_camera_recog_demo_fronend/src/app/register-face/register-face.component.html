@@ -1,0 +1,49 @@
+<button class="btn-primary" (click)="openRegistrationDialog()">New Registration +</button>
+
+  <!-- <div class="message"> {{ jsonDataString }}</div> -->
+  <div class="registerDetails">
+  <mat-table [dataSource]="dataSource" matSort>
+    {{dataSource}}
+    <!-- Face ID Column -->
+    <ng-container matColumnDef="faceId">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Face ID</mat-header-cell>
+      <mat-cell *matCellDef="let item">{{ item.faceId }}</mat-cell>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+      <mat-cell *matCellDef="let item">{{ item.name }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="face_direction">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Face Direction</mat-header-cell>
+      <mat-cell *matCellDef="let item">{{ item.face_direction }}</mat-cell>
+    </ng-container>
+    
+  
+    <!-- No Mask Column -->
+    <ng-container matColumnDef="noMask">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>No Mask</mat-header-cell>
+      <mat-cell *matCellDef="let item">{{ item.noMask }}</mat-cell>
+    </ng-container>
+  
+    <!-- Number of Face Images Column -->
+    <ng-container matColumnDef="numFaceImages">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Number of Face Images</mat-header-cell>
+      <mat-cell *matCellDef="let item">{{ item.numFaceImages }}</mat-cell>
+    </ng-container>
+  
+    <!-- Available Number of Face Images Column -->
+    <ng-container matColumnDef="availableNumFaceImages">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Available Number of Face Images</mat-header-cell>
+      <mat-cell *matCellDef="let item">{{ item.availableNumFaceImages }}</mat-cell>
+    </ng-container>
+  
+    <!-- Table Rows -->
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+  

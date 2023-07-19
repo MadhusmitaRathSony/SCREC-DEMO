@@ -1,0 +1,11 @@
+<button class="btn-primary" (click)="authenticate()">Authenticate</button>
+<button class="btn-primary" (click)="stopAuthenticate()">Stop</button>
+<div class="authenticationContent">
+    <div class="card" *ngFor="let item of faceImageDetails">
+        <img [src]="item.get('image')" alt="Face Image" style="width:100%">
+        <div class="container">
+            <h4>{{ "ID: " + item.get('faceName') }}</h4>
+            <h4>{{ "Name: " + item.get('face_id') }}</h4>
+        </div>
+    </div>
+</div>

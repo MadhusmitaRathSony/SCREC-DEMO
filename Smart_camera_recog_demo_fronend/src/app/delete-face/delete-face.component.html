@@ -1,0 +1,61 @@
+<button class="btn-primary" (click)="delete()">Delete</button>
+
+<div class="content">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Checkbox Column -->
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef>
+        <mat-checkbox (change)="$event ? toggleAllRows() : null" [checked]="selection.hasValue() && isAllSelected()"
+          [indeterminate]="selection.hasValue() && !isAllSelected()" [aria-label]="checkboxLabel()">
+        </mat-checkbox>
+      </th>
+      <td mat-cell *matCellDef="let row">
+        <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+          [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row)">
+        </mat-checkbox>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="faceId">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Face ID</mat-header-cell>
+      <mat-cell *matCellDef="let item">{{ item.faceId }}</mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+      <mat-cell *matCellDef="let item">{{ item.name }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="face_direction">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Face Direction</mat-header-cell>
+      <mat-cell *matCellDef="let item">{{ item.face_direction }}</mat-cell>
+    </ng-container>
+
+
+    <!-- No Mask Column -->
+    <ng-container matColumnDef="noMask">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>No Mask</mat-header-cell>
+      <mat-cell *matCellDef="let item">{{ item.noMask }}</mat-cell>
+    </ng-container>
+
+    <!-- Number of Face Images Column -->
+    <ng-container matColumnDef="numFaceImages">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Number of Face Images</mat-header-cell>
+      <mat-cell *matCellDef="let item">{{ item.numFaceImages }}</mat-cell>
+    </ng-container>
+
+    <!-- Available Number of Face Images Column -->
+    <ng-container matColumnDef="availableNumFaceImages">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Available Number of Face Images</mat-header-cell>
+      <mat-cell *matCellDef="let item">{{ item.availableNumFaceImages }}</mat-cell>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+    </tr>
+  </table>
+</div>
+<mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>

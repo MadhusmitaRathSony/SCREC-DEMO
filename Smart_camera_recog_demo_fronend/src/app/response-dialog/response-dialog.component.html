@@ -1,0 +1,16 @@
+<div class="header">
+    <h1>Status</h1>
+</div>
+<div class="content">
+    <div *ngIf="isRegister; then thenBlock else elseBlock"></div>
+    <ng-template #thenBlock>
+        <p> {{!isError?"FaceID-"+data.response.face_id+"
+            "+data.response.message:data.response.message}} </p>
+    </ng-template>
+    <ng-template #elseBlock>
+        <p> {{data.response.delete}} </p>
+    </ng-template>
+</div>
+<div class="footer">
+    <button class="btn btn-primary" (click)="closeDialog()">OK</button>
+</div>
